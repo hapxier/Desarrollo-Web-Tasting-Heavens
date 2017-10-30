@@ -1,0 +1,61 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Restaurant Registration</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+  <h3>BFood</h3>
+
+  <form #f="ngForm" (ngSubmit)="sendData(f)">
+    <ion-list>
+
+      <ion-item>
+        <ion-label color="primary" stacked>Name</ion-label>
+        <ion-input type="name" placeholder="Name" name="name" ngModel #name = "ngModel"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label color="primary" stacked>Address</ion-label>
+        <ion-input type="name" placeholder="Address" name="address" ngModel #address = "ngModel"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label color="primary" stacked>Phone</ion-label>
+        <ion-input type="number" placeholder="Phone" name="phone" ngModel #phone = "ngModel"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Foundation year</ion-label>
+        <ion-datetime displayFormat="D/MM/YYYY" pickerFormat="D MMMM YYYY" [(ngModel)]="myDate" name="birthdate" ngModel #birthdate = "ngModel"></ion-datetime>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Pay Mode</ion-label>
+        <ion-select [(ngModel)]="gaming" name="pay_mode" ngModel #payMode = "ngModel">
+          <ion-option value="Monthly">Monthly</ion-option>
+          <ion-option value="Quarterly">Quarterly</ion-option>
+          <ion-option value="Annual">Annual</ion-option>
+        </ion-select>
+      </ion-item>
+
+
+      <ion-item>
+        <ion-label color="primary" stacked>Email</ion-label>
+        <ion-input type="email" placeholder="Email Input" name="email" ngModel #email = "ngModel"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label color="primary" stacked>Password</ion-label>
+        <ion-input type="password" placeholder="Password Input" name="password" ngModel #password = "ngModel"></ion-input>
+      </ion-item>
+      <button ion-button full color="light" (click)="goLogged()">Register</button>
+    </ion-list>
+
+  </form>
+
+
+
+</ion-content>

@@ -1,0 +1,153 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+          </button>
+
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <div class="bg-imgProfile">
+        <img src="../../assets/img/ld1.jpg">
+    </div>
+    
+    <div class="main-cnt">
+        <h1 text-center>Restaurant</h1>
+        <div class="follow">
+            <ion-row>
+                <ion-col>
+                    <div>Followers</div>
+                    <div>10</div>
+                </ion-col>
+                <ion-col>
+                    <div>Views</div>
+                    <div>3</div>
+                </ion-col>
+            </ion-row>
+        </div>
+
+
+        <div padding>
+            <ion-segment [(ngModel)]="restaurants">
+                <ion-segment-button value="info">
+                    Infomation
+                </ion-segment-button>
+                <ion-segment-button value="menu">
+                    Menu
+                </ion-segment-button>
+                <ion-segment-button value="reservation">
+                    Reservations
+                </ion-segment-button>
+                <ion-segment-button value="location">
+                    Location
+                </ion-segment-button>
+            </ion-segment>
+        </div>
+
+        <div [ngSwitch]="restaurants">
+            <ion-list *ngSwitchCase="'info'">
+                <ion-item>
+                    <ion-card>
+                        <ion-card-content *ngFor="let user of users">
+                            <ion-card-title>
+                                <!--h1>{{user.NOMBRE_USUARIO}}</h1-->
+                                Information
+                            </ion-card-title>
+                            <p>
+                                Information about restaurant or bar.
+                            </p>
+                        </ion-card-content>
+                        <ion-card-content *ngFor="let user of users">
+                            <ion-card-title>
+                                <!--h1>{{user.NOMBRE_USUARIO}}</h1-->
+                                TimeTable
+                            </ion-card-title>
+                            <p>
+                                Schedule when is opened
+                            </p>
+                        </ion-card-content>
+                    </ion-card>
+                </ion-item>
+            </ion-list>
+
+
+
+            <ion-list *ngSwitchCase="'menu'">
+                <ion-item>
+                    <ion-card>
+                        <img src="../../assets/img/ld1.jpg" />
+                        <ion-card-content>
+                            <ion-card-title>
+                                Plate 1
+                            </ion-card-title>
+                            <p>
+                                Description about plate 1
+                            </p>
+                        </ion-card-content>
+
+                        <ion-row>
+                            <ion-col>
+                                <button ion-button icon-left clear small>
+                                    <ion-icon name="thumbs-up"></ion-icon>
+                                    <div>12 Likes</div>
+                                 </button>
+                            </ion-col>
+                        </ion-row>
+                    </ion-card>
+                </ion-item>
+            </ion-list>
+
+            <ion-list *ngSwitchCase="'reservation'">
+                    <ion-item>
+                        
+                    </ion-item>
+                </ion-list>
+
+            
+                <ion-list *ngSwitchCase="'location'">
+                        <ion-item>
+                                <ion-card>
+                                        
+                                          <img src="../../assets/img/ld1.jpg">
+                                          <ion-fab right top>
+                                            <button ion-fab>
+                                              <ion-icon name="pin"></ion-icon>
+                                            </button>
+                                          </ion-fab>
+                                        
+                                          <ion-item>
+                                            <ion-icon name="football" item-start large></ion-icon>
+                                            <h2>MSucursal 1</h2>
+                                            <p>11 N. Way St, Madison, WI 53703</p>
+                                          </ion-item>
+                                        
+                                          <ion-item>
+                                            <ion-icon name="wine" item-left large ></ion-icon>
+                                            <h2>Sucursal 2</h2>
+                                            <p>14 S. Hop Avenue, Madison, WI 53703</p>
+                                          </ion-item>
+                                        
+                                          <ion-item>
+                                            <span item-left>18 min</span>
+                                            <span item-left>(2.6 mi)</span>
+                                            <button ion-button icon-left clear item-end>
+                                              <ion-icon name="navigate"></ion-icon>
+                                              Start
+                                            </button>
+                                          </ion-item>
+                                        
+                                        </ion-card>
+                        </ion-item>
+                    </ion-list>
+
+
+        </div>
+
+    </div>
+
+
+
+
+
+</ion-content>

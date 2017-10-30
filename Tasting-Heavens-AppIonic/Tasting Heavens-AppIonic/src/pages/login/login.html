@@ -1,0 +1,62 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Login</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+    <form [formGroup]="validationForm" (ngSubmit)="submit()">
+      <ion-card>
+        <img src="../../assets/img/logoDorado.png" />
+  
+        <ion-list>
+          <ion-item>
+            <button ion-button full>
+              <ion-icon name="logo-facebook"> Login with Facebok</ion-icon>
+            </button>
+            <button ion-button full color="danger">
+              <ion-icon name="logo-googleplus">Login with Google</ion-icon>
+            </button>
+          </ion-item>
+          <ion-item>
+            <ion-label color="primary" stacked>Email or Nickname</ion-label>
+            <ion-input type="email" placeholder="Email Input" [(ngModel)]="emailNickname" formControlName="emailNick"></ion-input>
+          </ion-item>
+          <ion-item *ngIf ="emailNick.hasError('required') && emailNick.touched">
+            <p>*Email or emailNickname</p>
+          </ion-item>
+  
+          <ion-item> 
+            <ion-label color="primary" stacked>Password</ion-label>
+            <ion-input type="password" placeholder="Password Input" [(ngModel)]="password" formControlName="pass"></ion-input>
+          </ion-item>
+
+          <ion-item *ngIf ="pass.hasError('required') && pass.touched">
+            <p>*Insert password</p>
+          </ion-item>
+
+
+          <button ion-button full color="light" (click)="signUp()">Log in</button>
+  
+  
+  
+          <ion-item>
+            <h6>Forgot your login details? </h6>
+          </ion-item>
+  
+          <ion-item>
+            <h6 (click)="registrationActionSheet()">Don't have an account? Sign up</h6>
+          </ion-item>
+  
+        </ion-list>
+      </ion-card>
+
+    </form>
+   
+
+
+
+
+</ion-content>

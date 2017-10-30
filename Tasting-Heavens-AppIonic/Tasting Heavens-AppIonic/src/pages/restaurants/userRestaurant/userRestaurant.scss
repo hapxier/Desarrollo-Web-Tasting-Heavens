@@ -1,0 +1,24 @@
+page-restaurantProfile{
+    .bg-imgProfile{
+    background-image: url('../../assets/img/ld1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    filter: blur(5xp);
+    background-position: center center;
+    }
+
+    .main-cnt{
+        width: 100%;
+        height: 700px;
+       
+    }
+
+
+    .follow{
+        position: relative;
+        text-align: center;
+    }
+
+ 
+}

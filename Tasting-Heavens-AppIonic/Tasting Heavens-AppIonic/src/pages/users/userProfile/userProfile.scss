@@ -1,0 +1,63 @@
+page-userProfile{
+    .bg-imgProfile{
+    background-image: url('../../assets/img/ld1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    filter: blur(5xp);
+    background-position: center center;
+    }
+
+    .main-cnt{
+        width: 100%;
+        height: 700px;
+       
+    }
+
+    .avatar-img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    z-index: 10;
+    margin-top: -70px;
+    position: relative;
+    left: 50%;
+    margin-right: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: -6px 15px 81px 3px rgba(0,0,0,0.75);
+    }
+
+    .follow{
+        position: relative;
+        text-align: center;
+    }
+
+    
+        .SwipedTabs-indicatorSegment
+        {
+            -webkit-transition: 0.3s all;
+            -moz-transition:  0.3s all;
+            -o-transition:  0.3s all;
+            transition:  0.3s all;
+            transform-origin: top 0 left 0;
+            height: 1px;
+            position: relative;
+            top: -2px;
+            background-color: black !important;
+        }
+        .SwipedTabs-tabs ion-segment-button
+        {
+            border:none !important;
+            color:gray!important;
+            background-color:white!important;
+        }
+         .SwipedTabs-tabs ion-segment-button.SwipedTabs-activeTab
+        {
+            color:black !important;
+        }
+        .SwipedTabs-tabs
+        {
+            border-bottom: solid 1px #e6e6e6  !important;
+        }
+    
+}
