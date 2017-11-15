@@ -47,14 +47,15 @@
                     		</div>
                         </div>
                         <div class="form-bottom">
-		                    <form role="form" action="perfilUsuario.html" method="post" class="login-form">
+
+		                    <form role="form" class="login-form" onsubmit="return validacionIngresar()">
 		                    	<div class="form-group">
 		                    		<label class="sr-only" for="form-username">Usuario</label>
 		                        	<input type="text" name="txt-usuario" placeholder="Usuario" class="form-username form-control" id="txt-usuario">
 		                        </div>
 		                        <div class="form-group">
 		                        	<label class="sr-only" for="form-password">Contraseña</label>
-		                        	<input type="password" name="form-password" placeholder="Contraseña" class="form-password form-control" id="form-password">
+		                        	<input type="password" name="form-password" placeholder="Contraseña" class="form-password form-control" id="login-password">
 		                        </div>
 		                        <button type="submit" class="btn">Ingresar</button>
 
@@ -67,6 +68,7 @@
                     				</div>
                    				 </div>
 		                    </form>
+
 	                    </div>
                     </div>
                 </div>
@@ -93,7 +95,8 @@
                         </div>
 
                         <div class="form-bottom">
-		                    <form role="form" action="perfilRestaurante.html" method="post" class="registration-form" id="FU">
+		                    <!-- Formulario Registro Restaurante -->
+		                    <form role="form"  class="registration-form" id="FU" onsubmit="return validacionRestaurante()">
 		                    	<div class="form-group">
 		                    		<label class="sr-only">Nombre</label>
 		                        	<input type="text" name="txt-nombre-usuario" placeholder="Nombre" class="form-control" id="txt-nombre-usuario">
@@ -106,7 +109,7 @@
 		                        </div>
 		                        <div class="form-group">
 		                        	<label class="sr-only">Contraseña</label>
-		                        	<input type="password" name="contraseña-usuario" placeholder="Contraseña" class="form-control" id="contraseña-usuario">
+		                        	<input type="password" name="contraseña-usuario" placeholder="Contraseña" class="form-control" id="contrasena-usuario">
 		                        </div>
 
 		                        <div class="form-group">
@@ -134,16 +137,20 @@
 		                        </div>
 		                        <button type="submit" class="btn">Registarse</button>
 		                    </form>
+		                    <!-- Formulario Registro Usuario -->
 
-		                    <form role="form" action="perfilUsuario.html" method="post" class="registration-form" id="FR">
+
+		                    <form role="form"  class="registration-form" id="FR" onsubmit="return validacionUsuario()">
 		                    	<div class="form-group">
 		                    		<label class="sr-only">Nombre</label>
 		                        	<input type="text" name="txt-nombre-cliente" placeholder="Nombre" class="form-control" id="txt-nombre-cliente">
 		                        </div>
+		                        
 		                        <div class="form-group">
 		                        	<label class="sr-only">Apellido</label>
 		                        	<input type="text" name="txt-apellido-cliente" placeholder="Apellido" class="form-control" id="txt-apellido-cliente">
 		                        </div>
+		                        
 		                        <div class="form-group">
 		                        	<label class="sr-only">Correo</label>
 		                        	<input type="text" name="correo-cliente" placeholder="Correo" class="form-control" id="correo-cliente">
@@ -151,20 +158,23 @@
 
 		                        <div class="form-group">
 		                        	<label class="sr-only">Contraseña</label>
-		                        	<input type="password" name="contraseña-cliente" placeholder="Contraseña" class="form-control" id="contraseña-cliente">
+		                        	<input type="password" name="contraseña-cliente" placeholder="Contraseña" class="form-control" id="contrasena-cliente">
 		                        </div>
-		                         <div class="form-group">
+		                        
+		                        <div class="form-group">
 		                        	<label class="sr-only">Género</label>
 		                        	<h5 style="color: #fff">Género</h5>
 		                        	<h5 style="color: #fff"><label><input type="radio" name="rbt-genero" value="F">Femenino</label></h5>
 		                        	<h5 style="color: #fff"><label><input type="radio" name="rbt-genero" value="M">Masculino</label></h5>
 		                        	
 		                        </div>
+
 		                        <div class="form-group">
 		                        	<label class="sr-only">Fecha de nacimiento</label>
 		                        	<input type="date" name="fecha-nac" placeholder="MM/DD/AAAA" class=" form-control" id="fecha-nac">
 		                        </div>
-		                        <button type="submit" class="btn">Registrarse</button>
+
+		                        <button  class="btn" >Registrarse</button>
 		                    </form>		                    
 	                    </div>
                 	</div>
